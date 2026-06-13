@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haiwei's Portfolio</title>
+  <style>
+
+    /* ===== RESET & BASE ===== */
+
+    /* Removes default margin/padding browsers add to everything */
+    * {
+      margin: 0;
+      padding: 0;
+      /* Makes padding included in width calculations, not added on top */
+      box-sizing: border-box;
+    }
+
+    /* ===== BODY ===== */
+
+    body {
+      /* Deep dark background — softer than pure black */
+      background-color: #0a0a0a;
+      /* Default text colour — off-white, easier on eyes than pure white */
+      color: #e8e8e8;
+      /* System font stack: uses the native font on each OS (San Francisco on Mac, Segoe UI on Windows) */
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      /* Comfortable line height for body text — 1.6x the font size */
+      line-height: 1.6;
+      /* Slightly larger than default (16px) for readability */
+      font-size: 17px;
+    }
+
+    /* ===== LAYOUT CONTAINER ===== */
+
+    .container {
+      /* Never wider than 720px — keeps lines readable */
+      max-width: 720px;
+      /* 0 top/bottom margin, auto left/right = centres the block horizontally */
+      margin: 0 auto;
+      /* Space inside: 80px top/bottom, 24px left/right */
+      padding: 80px 24px;
+    }
+
+    /* ===== HEADER ===== */
+
+    header {
+      /* Space below the header before the sections start */
+      margin-bottom: 72px;
+    }
+
+    .name {
+      /* Large, commanding heading */
+      font-size: 2.8rem;
+      /* Heavy weight */
+      font-weight: 700;
+      /* Slightly tightened letter spacing — looks more refined at large sizes */
+      letter-spacing: -0.03em;
+      /* Pure white for maximum contrast on the heading */
+      color: #ffffff;
+      /* Space below name before the title line */
+      margin-bottom: 8px;
+    }
+
+    .title {
+      /* Smaller than the name, bigger than body text */
+      font-size: 1rem;
+      /* Muted colour — creates visual hierarchy without needing size difference alone */
+      color: #666666;
+      /* Lighter weight so it doesn't compete with the name */
+      font-weight: 400;
+      /* Space below before the bio */
+      margin-bottom: 24px;
+      /* Spreads letters slightly — works well for subtitle/label text */
+      letter-spacing: 0.04em;
+      /* Uppercase reinforces the label feel */
+      text-transform: uppercase;
+      /* Slightly smaller */
+      font-size: 0.85rem;
+    }
+
+    .bio {
+      /* Slightly muted — not as bright as headings, comfortable for reading */
+      color: #a8a8a8;
+      /* Generous line height for multi-line text */
+      line-height: 1.75;
+      /* Slightly larger than base for the bio to feel important */
+      font-size: 1.05rem;
+      /* Constrain bio width even further for readability */
+      max-width: 680px;
+    }
+
+    /* ===== DIVIDER ===== */
+
+    .divider {
+      /* 1px horizontal line */
+      border: none;
+      border-top: 1px solid #1f1f1f;
+      /* Space above and below the divider */
+      margin: 48px 0;
+    }
+
+    /* ===== SECTIONS ===== */
+
+    .section {
+      /* Space between each section */
+      margin-bottom: 48px;
+    }
+
+    .section-label {
+      /* Small uppercase label above each section */
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      /* Accent colour — a muted green, feels modern and technical */
+      color: #e44182;
+      /* Space below label before content */
+      margin-bottom: 16px;
+    }
+
+    .section h2 {
+      /* Section heading */
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+    }
+
+    .section p:not(.section-label) {
+      color: #888888;
+      line-height: 1.75;
+      font-size: 0.95rem;
+    }
+
+    /* ===== CARDS ===== */
+
+    .card {
+      /* Dark card background — slightly lighter than page background */
+      background-color: #111111;
+      /* Subtle border to define the card edge */
+      border: 1px solid #1f1f1f;
+      /* Rounds the corners */
+      border-radius: 12px;
+      /* Space inside the card */
+      padding: 24px;
+      /* Space between cards */
+      margin-bottom: 12px;
+    }
+
+    /* When hovering over a card, subtly lighten it */
+    .card:hover {
+      background-color: #161616;
+      /* Smooth transition — 0.2 seconds */
+      transition: background-color 0.2s ease;
+    }
+
+    /* ===== FOOTER ===== */
+
+    footer {
+      margin-top: 80px;
+      padding-top: 32px;
+      border-top: 1px solid #1a1a1a;
+      font-size: 0.85rem;
+      color: #444444;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <header>
+      <h1 class="name">Haiwei Li</h1>
+      <p class="title">Law Student &middot; Future AI Corporate Lawyer</p>
+      <p class="bio">
+        Tracking my swimming. Goal is 4k in 1 hour by the end of 2026 (1:30&lt;100m)
+      <br> also building a personal knowledge vault to house everything.
+      </p>
+    </header>
+
+    <hr class="divider">
+
+    <!-- WHAT I'M BUILDING -->
+    <div class="section">
+      <p class="section-label">What I'm Building</p>
+      <div class="card">
+        <h2>Knowledge Vault</h2>
+        <p>A personal web app to house everything I'm learning — reading notes, AI projects, legal research, and SQE prep. Built with React, Supabase, and deployed on Vercel.</p>
+      </div>
+      <div class="card">
+        <h2>Matcha Loyalty System</h2>
+        <p>A web-based loyalty and dashboard app for a 3-branch matcha café business in Manchester and London.</p>
+      </div>
+    </div>
+
+    <!-- WHAT I'M READING -->
+    <div class="section">
+      <p class="section-label">What I'm Reading</p>
+      <div class="card">
+        <h2>Currently reading</h2>
+        <p>Add your current book here.</p>
+      </div>
+    </div>
+
+    <!-- WHAT I'M LEARNING -->
+    <div class="section">
+      <p class="section-label">What I'm Learning</p>
+      <div class="card">
+        <h2>React + Supabase</h2>
+        <p>Building full-stack web apps with modern tooling. Day 2 of an 18-day intensive.</p>
+      </div>
+      <div class="card">
+        <h2>SQE1 — Contract Law, Tort, Land</h2>
+        <p>Preparing for the January 2027 sitting alongside the technical work.</p>
+      </div>
+    </div>
+
+     <!-- WHAT I'M THINKING -->
+    <div class="section">
+      <p class="section-label">What I'm Thinking</p>
+      <div class="card">
+        <h2>GRATITUDE</h2>
+        <p>crazy life i have lived considering where i came from</p>
+      </div>
+      <div class="card">
+        <h2>Health always comes first</h2>
+        <p>no matter what you do - your health is your greatest asset.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <footer>
+      Built by Haiwei Li &middot; 2026
+    </footer>
+
+  </div>
+
+</body>
+</html>
